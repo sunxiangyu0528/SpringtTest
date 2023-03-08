@@ -39,6 +39,11 @@ public class UserControl {
         return userEntities;
     }
 
+    @GetMapping("/all")
+    public List<UserEntity> get_all() {
+        return userEntities;
+    }
+
     @GetMapping("/{id}")
     public UserEntity get_one(@PathVariable int id) {
         List<UserEntity> userEntities = this.userEntities;
