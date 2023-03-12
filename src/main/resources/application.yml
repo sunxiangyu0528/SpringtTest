@@ -1,6 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    jdbc-url: jdbc:mysql://ltp-client-test.cp7ijbroynh3.ap-northeast-1.rds.amazonaws.com:3306/ltp-client?useSSL=false&socketTimeout=60000&serverTimezone=Asia/Shanghai&setUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+    url: jdbc:mysql://ltp-client-test.cp7ijbroynh3.ap-northeast-1.rds.amazonaws.com:3306/ltp-client?useSSL=false&socketTimeout=60000&serverTimezone=Asia/Shanghai&setUnicode=true&characterEncoding=utf8&allowMultiQueries=true
     username: test_client
     password: PK0jLXzurieg5h5oz4PyR1sCVI05ev
+
