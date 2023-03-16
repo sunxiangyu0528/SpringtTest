@@ -13,4 +13,9 @@ public class UserInfoEntity implements Serializable {
     private Integer id;
     @TableField("email")
     private String email;
+    @TableField("name_en")
+    private String nameEn;
+    @TableField("kyc_level")
+    private String kycLevel;
+
 }
