@@ -5,6 +5,7 @@ import com.example.springttest.Mapper.UserInfoMapper;
 import com.example.springttest.Service.iml.UserInfoServiceIml;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @RequestMapping("/")
 @RestController
+@Validated
 public class UserInfoControl {
     @Autowired
     UserInfoServiceIml userInfoServiceIml;
@@ -47,7 +49,7 @@ public class UserInfoControl {
     }
 
     @GetMapping("/get2")
-    public UserInfoEntity getByID3(@PathParam("name_en")  String name_en){
+    public UserInfoEntity getByID3(@PathParam("name_en") @RequestBody  String name_en){
         System.out.println("AAA"+ name_en);
         System.out.println(userInfoServiceIml.getByName(name_en));
         return userInfoServiceIml.getByName(name_en);
