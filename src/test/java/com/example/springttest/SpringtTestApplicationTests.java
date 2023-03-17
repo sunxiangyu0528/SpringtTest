@@ -17,6 +17,8 @@ class SpringtTestApplicationTests {
     void query() {
         List<UserInfoEntity> userInfoEntities = userInfoMapper.selectList(null);
         System.out.println(userInfoEntities);
+        System.out.println(userInfoMapper.getByName("test2@liquiditytech.com"));
+
     }
 
 }

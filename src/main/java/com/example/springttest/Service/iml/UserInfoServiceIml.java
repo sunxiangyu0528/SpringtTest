@@ -24,4 +24,10 @@ public class UserInfoServiceIml implements UserInfoService {
         return userInfoMapper.selectById(id);
 
     }
+
+    @Override
+    public UserInfoEntity getByName(String name) {
+        return userInfoMapper.getByName(name);
+    }
+
 }

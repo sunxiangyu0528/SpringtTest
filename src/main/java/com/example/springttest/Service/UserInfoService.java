@@ -10,4 +10,6 @@ public interface UserInfoService {
         List<UserInfoEntity> queryUserInfo();
 
         UserInfoEntity getById(Integer id);
+
+        UserInfoEntity getByName(String name);
 }
